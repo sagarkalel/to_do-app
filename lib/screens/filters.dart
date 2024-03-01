@@ -19,40 +19,6 @@ class FiltersScreen extends ConsumerWidget {
         children: [
           Column(
             children: [
-              swithTile(
-                  context,
-                  "gluten-free",
-                  "Only iclude gluten-free meals.",
-                  activeFilters[Filter.glutenFree]!, (isChecked) {
-                ref
-                    .read(filtersProvider.notifier)
-                    .setFilter(Filter.glutenFree, isChecked);
-              }),
-              swithTile(
-                  context,
-                  "lactose-free",
-                  "Only iclude lactose-free meals.",
-                  activeFilters[Filter.lactoseFree]!, (isChecked) {
-                ref
-                    .read(filtersProvider.notifier)
-                    .setFilter(Filter.lactoseFree, isChecked);
-              }),
-              swithTile(context, "Vegetarian", "Only iclude vegetarian meals.",
-                  activeFilters[Filter.vegetarian]!, (isChecked) {
-                ref
-                    .read(filtersProvider.notifier)
-                    .setFilter(Filter.vegetarian, isChecked);
-              }),
-              swithTile(context, "Vegan", "Only iclude Vegan meals.",
-                  activeFilters[Filter.vegan]!, (isChecked) {
-                ref
-                    .read(filtersProvider.notifier)
-                    .setFilter(Filter.vegan, isChecked);
-              }),
-            ],
-          ),
-          Column(
-            children: [
               AnimatedContainer(
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.easeInOut,
@@ -93,7 +59,41 @@ class FiltersScreen extends ConsumerWidget {
                 )),
               )
             ],
-          )
+          ),
+          Column(
+            children: [
+              swithTile(
+                  context,
+                  "gluten-free",
+                  "Only iclude gluten-free meals.",
+                  activeFilters[Filter.glutenFree]!, (isChecked) {
+                ref
+                    .read(filtersProvider.notifier)
+                    .setFilter(Filter.glutenFree, isChecked);
+              }),
+              swithTile(
+                  context,
+                  "lactose-free",
+                  "Only iclude lactose-free meals.",
+                  activeFilters[Filter.lactoseFree]!, (isChecked) {
+                ref
+                    .read(filtersProvider.notifier)
+                    .setFilter(Filter.lactoseFree, isChecked);
+              }),
+              swithTile(context, "Vegetarian", "Only iclude vegetarian meals.",
+                  activeFilters[Filter.vegetarian]!, (isChecked) {
+                ref
+                    .read(filtersProvider.notifier)
+                    .setFilter(Filter.vegetarian, isChecked);
+              }),
+              swithTile(context, "Vegan", "Only iclude Vegan meals.",
+                  activeFilters[Filter.vegan]!, (isChecked) {
+                ref
+                    .read(filtersProvider.notifier)
+                    .setFilter(Filter.vegan, isChecked);
+              }),
+            ],
+          ),
         ],
       ),
     );

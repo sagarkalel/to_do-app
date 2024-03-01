@@ -7,7 +7,7 @@ class TestClipper extends CustomClipper<Path> {
     double x = size.width;
     double y = size.height;
     return path
-      ..addPolygon([Offset(0, 0), Offset(0, y), Offset(x, y)], true)
+      ..addPolygon([const Offset(0, 0), Offset(0, y), Offset(x, y)], true)
       ..lineTo(x / 2, y / 2);
   }
 
